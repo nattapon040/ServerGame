@@ -12,12 +12,28 @@ public class Player  implements Serializable {
 	private String namePlyer;
 	private int blood ;
 	
-	public Player(String key,int x, int y) {
+	private ObjectDataLaser dataLaser;
+	
+	public Player(String key,int x, int y,ObjectDataLaser dataLaser) {
 		this.Key_User = key;
 		this.x = x;
 		this.y = y;
-	
+		this.dataLaser = dataLaser;
 	}
+	
+	
+
+	public ObjectDataLaser getDataLaser() {
+		return dataLaser;
+	}
+
+
+
+	public void setDataLaser(ObjectDataLaser dataLaser) {
+		this.dataLaser = dataLaser;
+	}
+
+
 
 	public int getX() {
 		return x;
@@ -74,4 +90,6 @@ public class Player  implements Serializable {
 	public void setBlood(int blood) {
 		this.blood = blood;
 	}
+	
+	
 }

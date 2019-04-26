@@ -18,7 +18,10 @@ public class Laser extends JPanel implements ActionListener{
 	private int damage;
 	private Timer timer ;
 	private boolean statusShoot = false;
-	public Laser(int x, int y) {
+	private int  key;
+	
+	public Laser(int key ,int x, int y) {
+		this.key = key;
 		this.x = x;
 		this.y = y;
 		timer = new Timer(100, this);
@@ -26,6 +29,18 @@ public class Laser extends JPanel implements ActionListener{
 		setBounds(x, y, 2, 500);
 		setBackground(new Color(255, 0, 7));
 	}
+	
+	
+	public int getKey() {
+		return key;
+	}
+
+
+	public void setKey(int key) {
+		this.key = key;
+	}
+
+
 	public int getX() {
 		return x;
 	}
